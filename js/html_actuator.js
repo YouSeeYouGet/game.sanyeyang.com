@@ -48,23 +48,30 @@ HTMLActuator.prototype.clearContainer = function (container) {
   }
 };
 
-
 HTMLActuator.prototype.addTile = function (tile) {
   var text = new Array();
-  text[1] = "提出需求"
-  text[2] = "调研分析"
-  text[3] = "开会讨论"
-  text[4] = "原型文档"
-  text[5] = "打回再改"
-  text[6] = "说服开发"
-  text[7] = "内部测试"
-  text[8] = "灰度测试"
-  text[9] = "Beta测试"
-  text[10] = "正式上线"
-  text[11] = "不断迭代"
-  text[12] = "持续运营"
-  text[13] = "产品大卖"
-  text[14] = "辞职创业"
+  text[1] = "有些好奇"
+  text[2] = "偷偷观察"
+  text[3] = "初次接触"
+  text[4] = "隔空告白"
+  text[5] = "相约见面"
+  text[6] = "无话不谈"
+  text[7] = "形影不离"
+  text[8] = "浓情蜜意"
+  text[9] = "风波乍起"
+  text[10] = "一反常态"
+  text[11] = "固执已见"
+  text[12] = "互不相让"
+  text[13] = "伤心落泪"
+  text[15] = "劳燕分飞"
+  text[16] = "沉默不语"
+  text[17] = "无可奈何"
+  text[18] = "低头认错"
+  text[19] = "破镜重圆"
+  text[20] = "相濡以沫"
+  text[21] = "比翼双飞"
+  text[22] = "执子之手"
+  text[23] = "与子偕老"
   var self = this;
   var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; }
 
@@ -144,7 +151,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "你已经是绝对的产品大牛了，没有人可以虐你了!" : "年轻人，还是要提高自己的姿势水平啊！";
+  var message = won ? "你已经是绝对的情圣了，没有人可以虐你了!" : "年轻人，还是要提高自己的姿势水平啊！";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
@@ -169,7 +176,7 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   tweet.setAttribute("data-counturl", "https://www.yokeneng.com");
   tweet.textContent = "Tweet";
 
-  var text = "作为一枚产品汪，我被虐了" + this.score + "次！ " +
+  var text = "作为一枚单身狗，我被虐了" + this.score + "次！ " +
              "你也来试试看吧#";
   tweet.setAttribute("data-text", text);
 
